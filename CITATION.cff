@@ -1,0 +1,25 @@
+﻿cff-version: 1.2.0
+message: "If you use this repository, please cite the Zenodo software archive and the associated manuscript."
+title: "IAT Pairing-Position Identification Analysis"
+type: software
+version: "2.0.0"
+doi: "10.5281/zenodo.19711301"
+repository-code: "https://github.com/squareshorts/iat-counterbalancing-identification"
+license: MIT
+authors:
+  - family-names: "Matos"
+    given-names: "Felipe de Oliveira"
+    orcid: "https://orcid.org/0000-0002-4926-4694"
+    affiliation: "Department of Physiological Sciences, Universidade Estadual de Maringa"
+  - family-names: "Andrade de Lima"
+    given-names: "Marlos"
+    orcid: "https://orcid.org/0000-0002-8901-2272"
+    affiliation: "Department of Developmental Psychology and Personality, Universidade Federal do Rio Grande do Sul"
+  - family-names: "Zanon"
+    given-names: "Cristian"
+    orcid: "https://orcid.org/0000-0003-3822-5275"
+    affiliation: "Department of Developmental Psychology and Personality, Universidade Federal do Rio Grande do Sul"
+  - family-names: "Pereira"
+    given-names: "Antonio"
+    orcid: "https://orcid.org/0000-0002-0808-1058"
+    affiliation: "Signal Processing Laboratory, Universidade Federal do Para"

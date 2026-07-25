@@ -1,0 +1,34 @@
+﻿# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editors and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Raw and locally prepared data
+data/*
+!data/README.md
+
+# Large generated analytical intermediates
+results/block_aggregates_*.csv
+results/participant_measures_*.csv
+
+# Temporary files and logs
+*.log
+*.tmp
+*.temp
+*.bak
+~$*
+
+# Environment files and secrets
+.env
+.env.*
