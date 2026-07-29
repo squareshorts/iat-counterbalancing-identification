@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite the Zenodo software archive and the associated manuscript."
-title: "IAT Pairing-Position Identification Analysis"
+title: "IAT Pairing-Position and Sequence-Allocation Analysis"
 type: software
-version: "2.0.3"
-date-released: "2026-07-27"
+version: "2.0.4"
+date-released: "2026-07-29"
 repository-code: "https://github.com/squareshorts/iat-counterbalancing-identification"
 license: MIT
 authors:
