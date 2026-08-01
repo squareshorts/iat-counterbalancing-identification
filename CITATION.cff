@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite the Zenodo software archive and the associated manuscript."
-title: "IAT Pairing-Position and Sequence-Allocation Analysis"
+title: "Sequence Allocation in the Implicit Association Test: Analysis and Reproducibility Package"
 type: software
-version: "2.0.4"
-date-released: "2026-07-29"
+version: "2.1.0"
+date-released: "2026-08-01"
 repository-code: "https://github.com/squareshorts/iat-counterbalancing-identification"
 license: MIT
 authors:

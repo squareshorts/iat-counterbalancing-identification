@@ -1,0 +1,10 @@
+dataset,quantity,reconstructed,target,abs_diff,tolerance,passed
+Gender-Science,retained N,133460.0,133460.0,0.0,0.0,True
+Gender-Science,congruent-first,67274.0,67274.0,0.0,0.0,True
+Gender-Science,incongruent-first,66186.0,66186.0,0.0,0.0,True
+Gender-Science,D_modified beta,0.30332020439109736,0.3033,2.0204391097344843e-05,0.0001,True
+Gender-Science,D_modified gamma,0.07717968006240371,0.0772,2.0319937596297022e-05,0.0001,True
+Gender-Science,logrt_contrast beta,0.13704278003426157,0.137,4.2780034261558075e-05,0.0001,True
+Gender-Science,logrt_contrast gamma,0.028865495708337484,0.0289,3.450429166251476e-05,0.0001,True
+Gender-Science,err_contrast beta,0.031198751642588476,0.0312,1.2483574115228213e-06,0.0001,True
+Gender-Science,err_contrast gamma,0.022645655588696145,0.0226,4.5655588696146e-05,0.0001,True
