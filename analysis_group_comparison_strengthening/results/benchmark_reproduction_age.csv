@@ -1,0 +1,10 @@
+dataset,quantity,reconstructed,target,abs_diff,tolerance,passed
+Age,retained N,147296.0,147296.0,0.0,0.0,True
+Age,congruent-first,74347.0,74347.0,0.0,0.0,True
+Age,incongruent-first,72949.0,72949.0,0.0,0.0,True
+Age,D_modified beta,0.437018059857215,0.437,1.805985721498038e-05,0.0001,True
+Age,D_modified gamma,0.032430640192918664,0.0324,3.06401929186656e-05,0.0001,True
+Age,logrt_contrast beta,0.19569963276110863,0.1957,3.672388913800173e-07,0.0001,True
+Age,logrt_contrast gamma,0.003793048618610642,0.0038,6.9513813893578615e-06,0.0001,True
+Age,err_contrast beta,0.04282867152357749,0.0428,2.8671523577494806e-05,0.0001,True
+Age,err_contrast gamma,0.0240840505812785,0.0241,1.594941872149966e-05,0.0001,True
