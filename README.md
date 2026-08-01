@@ -1,26 +1,27 @@
 # Sequence Allocation in the Implicit Association Test
 
-This repository contains the reproducible analysis code and compact outputs supporting the study:
+This repository contains analysis code and compact validated outputs supporting the study:
 
 **Sequence allocation in the Implicit Association Test: exact estimands, group heterogeneity, and finite-sample operating characteristics**
 
 ## Scope
 
-The analysis distinguishes three quantities that are often conflated in the standard two-sequence IAT design: the equal-sequence marginal of the reported score, the sequence contrast of that score, and the allocation-induced component of a pooled group estimate. It reproduces the original Gender–Science and Age IAT benchmarks, reconstructs the public Age score, evaluates observed subgroup allocation effects, tests pairwise heterogeneity in the sequence contrast, and examines finite-sample operating characteristics by empirical resampling.
+The analysis distinguishes three quantities that are often conflated in the standard two-sequence IAT design: the equal-sequence marginal of the reported score, the sequence contrast of that score, and the allocation-induced component of a pooled group estimate. It reproduces the Gender–Science and Age IAT benchmarks, reconstructs the public Age score, evaluates observed subgroup allocation effects, compares sequence contrasts across groups, and examines finite-sample operating characteristics by empirical resampling.
 
 The final results show that observed allocation-induced shifts were negligible in the analysed archive, while sequence contrasts differed across groups. Finite-sample disagreements were modest, concentrated on near-null contrasts, and equal-sequence standardization did not improve root mean squared error.
 
 ## Included
 
-- scripts for preparing the public Age and Gender–Science IAT data;
-- the complete strengthening-analysis pipeline;
+- the original data-preparation and primary-analysis scripts;
 - benchmark-reproduction tables for both datasets;
 - reconstructed standardized-score validation;
-- subgroup estimands and pairwise comparisons;
-- bootstrap heterogeneity tests with false-discovery-rate correction;
-- age-band sensitivity analyses;
-- finite-sample resampling results;
-- robustness summaries, figure source data, and the final audit report.
+- Age participant-linkage and sequence-validation diagnostics;
+- sequence-specific standardized-score estimates;
+- a compact table of the headline subgroup and finite-sample results;
+- revised figure captions and the final strengthening audit;
+- an execution specification for the complete private analysis workflow.
+
+The full v2.1.0 archival package additionally contains the complete strengthening scripts, detailed subgroup and bootstrap tables, robustness tables, figure source data, and publication figures.
 
 ## Not included
 
@@ -46,34 +47,37 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-## Main workflow
-
-The complete strengthening analysis is run from the private analysis workspace with:
+## Original analysis workflow
 
 ```powershell
-python analysis_group_comparison_strengthening\scripts\run_strengthening_pipeline.py --root C:\path\to\iat_quantum_analysis --bootstrap-reps 3000 --sim-reps 5000 --seed 20260801
+python -m src.data.download_age_iat
+python -m src.data.prepare_age_iat
+python scripts\build_block_aggregates.py
+python scripts\analyse.py
 ```
 
-The script validates required inputs, reproduces the benchmark results, runs the subgroup and resampling analyses, creates figures, and writes the audit report. See `analysis_group_comparison_strengthening/scripts/README_execution.md` for details.
+The Gender–Science source files are expected under `data/GenderScience_iat_2019/iat_2019/`. Large intermediate and participant-level files are generated locally and excluded from Git.
 
-## Principal outputs
+## Strengthening analysis
+
+The complete strengthening workflow is run in the private analysis workspace. Its required inputs, arguments, outputs, seeds, and expected directory structure are documented in `analysis_group_comparison_strengthening/scripts/README_execution.md`. The compact validated outputs retained here permit verification of the manuscript’s headline numerical claims without redistributing participant-level data.
+
+## Principal v2.1.0 outputs
 
 - `analysis_group_comparison_strengthening/results/benchmark_reproduction_age.csv`
 - `analysis_group_comparison_strengthening/results/benchmark_reproduction_gender_science.csv`
 - `analysis_group_comparison_strengthening/results/standardized_score_sequence_estimates.csv`
-- `analysis_group_comparison_strengthening/results/subgroup_estimands.csv`
-- `analysis_group_comparison_strengthening/results/subgroup_pairwise_contrasts.csv`
-- `analysis_group_comparison_strengthening/results/gamma_heterogeneity_tests.csv`
-- `analysis_group_comparison_strengthening/results/age_band_sensitivity.csv`
-- `analysis_group_comparison_strengthening/results/finite_sample_resampling.csv`
-- `analysis_group_comparison_strengthening/results/robustness_summary.csv`
+- `analysis_group_comparison_strengthening/results/d600_vs_supplied_age.csv`
+- `analysis_group_comparison_strengthening/results/age_join_and_order_validation.csv`
+- `analysis_group_comparison_strengthening/results/headline_summary.csv`
 - `analysis_group_comparison_strengthening/reports/group_comparison_strengthening_audit.md`
+- `analysis_group_comparison_strengthening/figures/revised_figure_captions.md`
 
 The original compact outputs remain under `results/` for continuity with version 2.0.4.
 
 ## Release
 
-Version 2.1.0 adds the validated subgroup, bootstrap, sensitivity, and finite-sample analyses used in the revised methodological manuscript. See `CHANGELOG.md`.
+Version 2.1.0 adds the validated benchmark, score-reconstruction, linkage, subgroup-summary, and finite-sample results used in the revised methodological manuscript. See `CHANGELOG.md`.
 
 ## License
 
